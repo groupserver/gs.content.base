@@ -15,7 +15,7 @@ class SitePage(BrowserView):
 
     @Lazy
     def loggedInUserInfo(self):
-        retval = reateObject('groupserver.LoggedInUser', self.context)
+        retval = createObject('groupserver.LoggedInUser', self.context)
         assert retval, 'Could not create the user-info for the logged '\
             'in user from %s' % self.context
         return retval
