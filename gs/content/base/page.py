@@ -2,6 +2,8 @@
 from zope.component import createObject
 from zope.cachedescriptors.property import Lazy
 from Products.Five import BrowserView
+from zope.publisher.interfaces.browser import IBrowserPage
+from zope.interface import implements
 
 class SitePage(BrowserView):
     def __init__(self, context, request):
