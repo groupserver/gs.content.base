@@ -8,7 +8,7 @@ Pages
 =====
 
 A ``gs.content.base.SitePage`` is a concrete class that can be used for
-creating pages using just the ZMI. For example, the help-index is defined
+creating pages using just ZCML. For example, the help-index is defined
 in ``gs.help`` using the following::
 
   <browser:page 
