@@ -2,12 +2,11 @@
 from zope.component import createObject
 from zope.cachedescriptors.property import Lazy
 from Products.Five import BrowserView
-from zope.publisher.interfaces.browser import IBrowserPage
-from zope.interface import implements
+
 
 class SitePage(BrowserView):
     def __init__(self, context, request):
-        BrowserView.__init__(self, context, request)
+        super(SitePage, self).__init__(context, request)
 
     @Lazy
     def siteInfo(self):
@@ -21,4 +20,3 @@ class SitePage(BrowserView):
         assert retval, 'Could not create the user-info for the logged '\
             'in user from %s' % self.context
         return retval
-
