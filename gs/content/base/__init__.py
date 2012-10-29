@@ -1,3 +1,4 @@
-# coding=utf-8
-# This space intentionally left blank.
-
+# -*- coding: utf-8 -*-
+#lint:disable
+from page import SitePage
+#lint:enable
