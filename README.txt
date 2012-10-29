@@ -8,8 +8,8 @@ Pages
 =====
 
 A ``gs.content.base.SitePage`` is a concrete class that can be used for
-creating pages using just ZCML. For example, the help-index is defined
-in ``gs.help`` using the following::
+creating pages using just ZCML. For example, the help-index is defined in
+``gs.help`` using the following::
 
   <browser:page 
     name="index.html"
@@ -28,7 +28,7 @@ A site page has two properties defined.
   A ``Products.CustomUserFolder.userinfo.GSUserInfo`` instance,
   representing the currently logged in user. Like all *info* classes it has
   a ``name``, ``url``, and ``id``. In addition it has an ``anonymous``
-  property, which is set to ``True`` if the user not logged in.
+  property, which is set to ``True`` if the user is not logged in.
 
 Resources
 =========
