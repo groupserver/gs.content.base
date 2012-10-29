@@ -21,7 +21,7 @@ setup(name='gs.content.base',
       "Programming Language :: Python",
       "Topic :: Software Development :: Libraries :: Python Modules",
       ],
-    keywords='zope form formlib zope.formlib',
+    keywords='zope page site',
     author='Michael JasonSmith',
     author_email='mpj17@onlinegroups.net',
     url='http://groupserver.org/',
@@ -32,9 +32,12 @@ setup(name='gs.content.base',
     zip_safe=True,
     install_requires=[
         'setuptools',
-        # -*- Extra requirements: -*-
+        'zope.cachedescriptors',
+        'zope.component'
+        'Zope2',
+        'Products.GSContent',  # For the site info
+        'Products.CustomUserFolder',  # For the logged in user info
     ],
     entry_points="""
     # -*- Entry points: -*-
     """,)
-
