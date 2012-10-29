@@ -33,7 +33,7 @@ setup(name='gs.content.base',
     install_requires=[
         'setuptools',
         'zope.cachedescriptors',
-        'zope.component'
+        'zope.component',
         'Zope2',
         'Products.GSContent',  # For the site info
         'Products.CustomUserFolder',  # For the logged in user info
