@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
-##############################################################################
+############################################################################
 #
-# Copyright © 2013 OnlineGroups.net and Contributors.
+# Copyright © 2013, 2014 OnlineGroups.net and Contributors.
 # All Rights Reserved.
 #
 # This software is subject to the provisions of the Zope Public License,
@@ -11,7 +11,7 @@
 # WARRANTIES OF TITLE, MERCHANTABILITY, AGAINST INFRINGEMENT, AND FITNESS
 # FOR A PARTICULAR PURPOSE.
 #
-##############################################################################
+############################################################################
 from zope.component import createObject
 from zope.cachedescriptors.property import Lazy
 from Products.Five import BrowserView
@@ -24,7 +24,8 @@ class SitePage(BrowserView):
     @Lazy
     def siteInfo(self):
         retval = createObject('groupserver.SiteInfo', self.context)
-        assert retval, 'Could not create the SiteInfo from %s' % self.context
+        assert retval, 'Could not create the SiteInfo from '\
+            '%s' % self.context
         return retval
 
     @Lazy

@@ -1,15 +1,35 @@
 # -*- coding: utf-8 -*-
+############################################################################
+#
+# Copyright © 2014 OnlineGroups.net and Contributors.
+# All Rights Reserved.
+#
+# This software is subject to the provisions of the Zope Public License,
+# Version 2.1 (ZPL).  A copy of the ZPL should accompany this distribution.
+# THIS SOFTWARE IS PROVIDED "AS IS" AND ANY AND ALL EXPRESS OR IMPLIED
+# WARRANTIES ARE DISCLAIMED, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED
+# WARRANTIES OF TITLE, MERCHANTABILITY, AGAINST INFRINGEMENT, AND FITNESS
+# FOR A PARTICULAR PURPOSE.
+#
+############################################################################
+import codecs
 import os
 from setuptools import setup, find_packages
 from version import get_version
 
 version = get_version()
 
-setup(name='gs.content.base',
+with codecs.open('README.rst', encoding='utf-8') as f:
+    long_description = f.read()
+with codecs.open(os.path.join("docs", "HISTORY.rst"),
+                 encoding='utf-8') as f:
+    long_description += '\n' + f.read()
+
+setup(
+    name='gs.content.base',
     version=version,
     description="Core code for Web pages in GroupServer.",
-    long_description=open("README.rst").read() + "\n" +
-                      open(os.path.join("docs", "HISTORY.rst")).read(),
+    long_description=long_description,
     classifiers=[
         'Development Status :: 5 - Production/Stable',
         "Environment :: Web Environment",
@@ -20,11 +40,11 @@ setup(name='gs.content.base',
         "Operating System :: POSIX :: Linux"
         "Programming Language :: Python",
         "Topic :: Software Development :: Libraries :: Python Modules",
-      ],
-    keywords='zope page site',
+    ],
+    keywords='zope, page, view, site',
     author='Michael JasonSmith',
     author_email='mpj17@onlinegroups.net',
-    url='http://groupserver.org/',
+    url='http://github.com/groupserver/gs.content.base',
     license='ZPL 2.1',
     packages=find_packages(exclude=['ez_setup']),
     namespace_packages=['gs', 'gs.content'],
