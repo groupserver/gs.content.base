@@ -55,9 +55,16 @@ setup(
         'zope.cachedescriptors',
         'zope.component',
         'Zope2',
-        'Products.GSContent',  # For the site info
-        'Products.CustomUserFolder',  # For the logged in user info
     ],
     entry_points="""
     # -*- Entry points: -*-
     """,)
+# --=mpj17=-- These are required, but problematic. If I take them out
+# then GroupServer will still build fine (because of buildout.cfg) and
+# so will the setup.py on ReadTheDocs. If I leave them in I have to
+# start pointing ReadTheDocs at Products.NuxUserFolderWithGroups, which is
+# required by the CustomUserFolder, and I do not want that.
+#        'Products.GSContent',  # For the site info
+#        'Products.CustomUserFolder',  # For the logged in user info
+# TODO: Move the logged-in user info to gs.profile.loggedin
+# TODO: Move the SiteInfo to gs.site.info
