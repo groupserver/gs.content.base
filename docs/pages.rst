@@ -42,3 +42,19 @@ defined in :mod:`gs.help`:
      for=".interfaces.IGSHelp"
      class="gs.content.base.SitePage"
      permission="zope.Public"/>
+
+The *Login* page (in :mod:`gs.login`) is one of the few that
+directly sub-classes :class:`gs.content.base.SitePage`:
+
+.. code-block:: python
+
+   from gs.content.base import SitePage
+
+   class GSLoginView(SitePage):
+       def __init__(self, context, request):
+           super(GSLoginView, self).__init__(context, request)
+           self.state = None
+
+Most of the pages on GroupServer inherit from either
+:class:`gs.group.base.GroupPage` or
+:class:`gs.profile.base.ProfilePage`.

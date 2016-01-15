@@ -25,9 +25,12 @@ for GroupServer_ sites.
 Resources
 =========
 
+- Documentation:
+  http://groupserver.readthedocs.org/projects/gscontentbase/en/latest/
 - Code repository:
   https://github.com/groupserver/gs.content.base/
-- Questions and comments to http://groupserver.org/groups/development
+- Questions and comments to
+  http://groupserver.org/groups/development
 - Report bugs at https://redmine.iopen.net/projects/groupserver
 
 .. _GroupServer: http://groupserver.org/
