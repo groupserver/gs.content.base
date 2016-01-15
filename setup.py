@@ -1,7 +1,9 @@
 # -*- coding: utf-8 -*-
 ############################################################################
 #
-# Copyright © 2014 OnlineGroups.net and Contributors.
+# Copyright © 2011, 2012, 2013, 2014, 2016 OnlineGroups.net and 
+# Contributors.
+#
 # All Rights Reserved.
 #
 # This software is subject to the provisions of the Zope Public License,
@@ -17,6 +19,7 @@ import os
 from setuptools import setup, find_packages
 from version import get_version
 
+name = 'gs.content.base'
 version = get_version()
 
 with codecs.open('README.rst', encoding='utf-8') as f:
@@ -26,7 +29,7 @@ with codecs.open(os.path.join("docs", "HISTORY.rst"),
     long_description += '\n' + f.read()
 
 setup(
-    name='gs.content.base',
+    name=name,
     version=version,
     description="Core code for Web pages in GroupServer.",
     long_description=long_description,
@@ -44,10 +47,11 @@ setup(
     keywords='zope, page, view, site',
     author='Michael JasonSmith',
     author_email='mpj17@onlinegroups.net',
-    url='http://github.com/groupserver/gs.content.base',
+    url='http://github.com/groupserver/{0}'.format(name),
     license='ZPL 2.1',
     packages=find_packages(exclude=['ez_setup']),
-    namespace_packages=['gs', 'gs.content'],
+    namespace_packages=['.'.join(name.split('.')[:i])
+                        for i in range(1, len(name.split('.')))],
     include_package_data=True,
     zip_safe=False,
     install_requires=[
