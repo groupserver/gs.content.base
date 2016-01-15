@@ -1,10 +1,5 @@
-===================
-``gs.content.base``
-===================
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-Core classes for GroupServer content
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
+:mod:`gs.content.base`
+======================
 :Author: `Michael JasonSmith`_
 :Contact: Michael JasonSmith <mpj17@onlinegroups.net>
 :Date: 2016-01-15
@@ -16,11 +11,24 @@ Core classes for GroupServer content
 .. _Creative Commons Attribution-Share Alike 4.0 International License:
     http://creativecommons.org/licenses/by-sa/4.0/
 
-Introduction
-============
+Contents:
 
-The product defines the core class that is used to create pages
-for GroupServer_ sites.
+.. toctree::
+   :maxdepth: 2
+
+   pages
+   HISTORY
+
+
+The product defines the core class that is used to create
+:doc:`pages` for GroupServer_ sites.
+
+Indices and tables
+==================
+
+* :ref:`genindex`
+* :ref:`modindex`
+* :ref:`search`
 
 Resources
 =========
