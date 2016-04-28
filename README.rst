@@ -26,7 +26,7 @@ Resources
 =========
 
 - Documentation:
-  http://groupserver.readthedocs.org/projects/gscontentbase/en/latest/
+  http://groupserver.readthedocs.io/projects/gscontentbase/en/latest/
 - Code repository:
   https://github.com/groupserver/gs.content.base/
 - Questions and comments to
