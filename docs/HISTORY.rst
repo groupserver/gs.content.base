@@ -7,7 +7,7 @@ Changelog
 * Moving the documentation to `Read the Docs`_
 
 .. _Read the Docs:
-   http://groupserver.readthedocs.org/projects/gscontentbase/en/latest/
+   http://groupserver.readthedocs.io/projects/gscontentbase/en/latest/
 
 2.0.4 (2014-10-10)
 ------------------
